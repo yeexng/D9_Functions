@@ -34,8 +34,8 @@ function crazysum(n1,n2) {
     
 }
 
-crazysum(2,3)
-crazysum(2,2)
+console.log(crazysum(2,3))
+console.log(crazysum(2,2))
 
 /* EXERCISE 3
  Write a function called "crazyDiff" that computes the absolute difference between a given number and 19.
@@ -44,14 +44,14 @@ crazysum(2,2)
 
 function crazyDiff(n1) {
     if (n1 > 19) {
-        return (n1 - 19) * 3
+        return Math.abs(n1 - 19) * 3
     } else {
-    return 19 - n1
+    return Math.abs(19 - n1)
     }
 }
 
-crazyDiff(29)
-crazyDiff(3)
+console.log(crazyDiff(29))
+console.log(crazyDiff(3))
 
 /* EXERCISE 4
  Write a function called "boundary" which accept an integer parameter n and returns true if n is within 20 and 100 (included) or if n it's equal to 400.
@@ -68,11 +68,11 @@ function boundary(n) {
     }
     }
     
-    boundary(15)
-    boundary(20)
-    boundary(100)
-    boundary(400)
-    boundary(401)
+   console.log(boundary(15))
+   console.log(boundary(20))
+   console.log(boundary(100))
+   console.log(boundary(400))
+   console.log(boundary(401))
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
@@ -107,9 +107,9 @@ function check3and7(n) {
 
 }
 
-check3and7(9)
-check3and7(49)
-check3and7(100)
+console.log(check3and7(9))
+console.log(check3and7(49))
+console.log(check3and7(100))
 
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
