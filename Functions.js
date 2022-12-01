@@ -79,16 +79,17 @@ function boundary(n) {
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-/* function strivify(str) {
-    let x = "Strive"
-    if (x + str === "strive") {
-        return str
+const strivify = function (str) {
+    if (str.startsWith("Strive") /* true / false */) {
+      return str;
     } else {
-        return "Strive" + str
+      return "Strive " + str;
     }
-}
+  };
 
-strivify("words") */
+  console.log(strivify("Strive school"))
+  console.log(strivify("Shop"))
+  
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
@@ -130,16 +131,21 @@ console.log(result)
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
 
-function upperFirst(string) {
-    let words = string.split("");
-
-    for (i=0; i<words.length; i++){
-        words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+const upperFirstPhrase = function(str) { //phrase as param
+    let words = str.split(" ")
+    let finalString = []
+    for(let i = 0; i < words.length; i++) {
+      let firstChar = words[i].charAt(0)
+      console.log(firstChar)
+      let uppercaseChar = firstChar.toUpperCase()
+      let cutString = words[i].slice(1)
+      let finalWord = uppercaseChar + cutString
+      finalString.push(finalWord)
     }
-    return words.join("");
-}
-
-console.log(upperFirst("No idea what am i doing"))
+    console.log(finalString.join(""))
+  }
+  
+  upperFirstPhrase("Bello worlddddd!!")
 
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
@@ -159,9 +165,14 @@ cutString("thisissoharddddd")
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* function giveMeRandom(n) {
-    
-} */
+let giveMeRandom = function (n) {
+    let arr = [];
+    for (let i = 0; i <= n; i++) {
+      arr.push(Math.floor(Math.random() * 11));
+    }
+    return arr;
+  };
+  console.log(giveMeRandom(5));
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
